@@ -15,12 +15,13 @@ export const Blanket = () => {
 
   const handleColorChange = (swatch, newColor) => {
     console.log(swatchColors[swatch.color], newColor);
+
     setSwatchColors((prevSwatchColors) => ({ ...prevSwatchColors, [swatch.color]: newColor }));
   };
 
   return (
     <>
-      <div className="aspect-blanket w-full max-w-150">
+      <div className="aspect-blanket w-full max-w-150 shadow-xl shadow-black">
         <div className="h-full grid grid-cols-(--blanket-cols) grid-rows-(--blanket-rows)">
           {swatches.map((swatch, i) => (
             <Swatch key={i} swatch={swatch} color={swatchColors[swatch.color]} colorPicker={colorPickerOpen === swatch} handleColorPickerToggle={handleColorPickerToggle} handleColorChange={handleColorChange} />
