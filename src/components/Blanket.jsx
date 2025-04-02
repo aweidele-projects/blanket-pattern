@@ -7,10 +7,15 @@ export const Blanket = () => {
   const [swatchColors, setSwatchColors] = useState(colors);
   const [colorPickerOpen, setColorPickerOpen] = useState(false);
 
-  console.log(colorPickerOpen);
+  console.log(swatchColors);
 
   const handleColorPickerToggle = (swatch) => {
     setColorPickerOpen((prev) => (prev === swatch ? false : swatch));
+  };
+
+  const handleColorChange = (swatch, newColor) => {
+    console.log(swatchColors[swatch.color], newColor);
+    setSwatchColors((prevSwatchColors) => ({ ...prevSwatchColors, [swatch.color]: newColor }));
   };
 
   return (
@@ -18,7 +23,7 @@ export const Blanket = () => {
       <div className="aspect-blanket w-full max-w-150">
         <div className="h-full grid grid-cols-(--blanket-cols) grid-rows-(--blanket-rows)">
           {swatches.map((swatch, i) => (
-            <Swatch key={i} swatch={swatch} color={swatchColors[swatch.color]} colorPicker={colorPickerOpen === swatch} handleColorPickerToggle={handleColorPickerToggle} />
+            <Swatch key={i} swatch={swatch} color={swatchColors[swatch.color]} colorPicker={colorPickerOpen === swatch} handleColorPickerToggle={handleColorPickerToggle} handleColorChange={handleColorChange} />
           ))}
         </div>
       </div>
