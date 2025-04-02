@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { pattern, colors, patternColumns } from "../inc/pattern";
 import { Swatch } from "./Swatch";
+import yarnImage from "../assets/images/23991.jpg";
 const swatches = patternColumns(pattern);
 
 export const Blanket = () => {
@@ -21,7 +22,7 @@ export const Blanket = () => {
 
   return (
     <>
-      <div className="aspect-blanket w-full max-w-150 shadow-xl shadow-black">
+      <div className="aspect-blanket w-full shadow-xl shadow-black">
         <div className="h-full grid grid-cols-(--blanket-cols) grid-rows-(--blanket-rows)">
           {swatches.map((swatch, i) => (
             <Swatch key={i} swatch={swatch} color={swatchColors[swatch.color]} colorPicker={colorPickerOpen === swatch} handleColorPickerToggle={handleColorPickerToggle} handleColorChange={handleColorChange} />
