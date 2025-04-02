@@ -1,7 +1,10 @@
+import { Blanket } from "./components/Blanket";
 function App() {
   return (
     <>
-      <div>hi.</div>
+      <div className="p-10 flex justify-center items-center h-screen">
+        <Blanket />
+      </div>
     </>
   );
 }

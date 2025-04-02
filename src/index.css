@@ -1,0 +1,8 @@
+/* index.css */
+@import "tailwindcss";
+
+@theme {
+  --aspect-blanket: 665 / 813;
+  --blanket-cols: repeat(7, 1fr);
+  --blanket-rows: repeat(14, 1fr);
+}
