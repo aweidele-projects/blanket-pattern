@@ -21,19 +21,21 @@ export const colors = {
 const colorKeys = ["F", "E", "D", "C", "B", "A"];
 
 export const patternColumns = (pattern) => {
-  const column = pattern.map((col) => {
-    const [topSpan, swatches, firstSwatch] = col;
-    const bottomSpan = 14 - topSpan - swatches;
-    const colorIndex = colorKeys.indexOf(firstSwatch);
+  const column = pattern
+    .map((col, colNum) => {
+      const [topSpan, swatches, firstSwatch] = col;
+      const bottomSpan = 14 - topSpan - swatches;
+      const colorIndex = colorKeys.indexOf(firstSwatch);
 
-    return [
-      { span: topSpan, color: "N" },
-      ...[...Array(swatches)].map((e, i) => {
-        return { span: 1, color: colorKeys[(colorIndex + i) % colorKeys.length] };
-      }),
-      { span: bottomSpan, color: "N" },
-    ];
-  });
+      return [
+        { column: colNum + 1, row: 1, span: topSpan, color: "N" },
+        ...[...Array(swatches)].map((e, i) => {
+          return { column: colNum + 1, row: 1 + topSpan + i, span: 1, color: colorKeys[(colorIndex + i) % colorKeys.length] };
+        }),
+        { column: colNum + 1, row: 1 + topSpan + swatches, span: bottomSpan, color: "N" },
+      ];
+    })
+    .flat();
 
   return column;
 };
