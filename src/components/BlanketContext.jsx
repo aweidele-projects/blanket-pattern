@@ -20,5 +20,5 @@ export const BlanketProvider = ({ children }) => {
     setSelectedColor(false);
   };
 
-  return <BlanketContext.Provider value={{ patternColors, selectedColor, handleToggleColor, handleSetPatternColor }}>{children}</BlanketContext.Provider>;
+  return <BlanketContext.Provider value={{ patternColors, selectedColor, setSelectedColor, handleToggleColor, handleSetPatternColor }}>{children}</BlanketContext.Provider>;
 };

@@ -7,8 +7,6 @@ export const CurrentColors = () => {
 
   const currentColors = Object.fromEntries(Object.entries(patternColors).map(([key, productId]) => [key, products.find((product) => product.id === productId) || null]));
 
-  console.log(currentColors);
-
   return (
     <div className="text-white">
       <h2 className="text-2xl font-bold mb-4">Current Colors</h2>
