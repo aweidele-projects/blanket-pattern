@@ -2,6 +2,7 @@ import { useContext } from "react";
 import products from "../inc/products.json";
 import { YarnColor } from "./YarnColor";
 import { BlanketContext } from "./BlanketContext";
+import { CurrentColors } from "./CurrenColors";
 
 export const ColorSelector = () => {
   const { selectedColor } = useContext(BlanketContext);
@@ -14,7 +15,7 @@ export const ColorSelector = () => {
           ))}
         </div>
       ) : (
-        <p>Select a color</p>
+        <CurrentColors />
       )}
     </div>
   );
