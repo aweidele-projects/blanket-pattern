@@ -1,250 +1,300 @@
 [
   {
+    "id": "clarity",
     "name": "Clarity",
     "image": "26997.jpg",
     "color": "#c5d2e1"
   },
   {
+    "id": "hydrangea",
     "name": "Hydrangea",
     "image": "25772.jpg",
     "color": "#5c98cb"
   },
   {
+    "id": "indigo-bunting",
     "name": "Indigo Bunting",
     "image": "29529.jpg",
     "color": "#0d7bb3"
   },
   {
+    "id": "nightfall",
     "name": "Nightfall",
     "image": "23991.jpg",
     "color": "#1f3075"
   },
   {
+    "id": "planetarium",
     "name": "Planetarium",
     "image": "24465.jpg",
     "color": "#0f2b43"
   },
   {
+    "id": "raindrop",
     "name": "Raindrop",
     "image": "25326.jpg",
     "color": "#879ab5"
   },
   {
+    "id": "beach-glass",
     "name": "Beach Glass",
     "image": "29526.jpg",
     "color": "#b2d6cf"
   },
   {
+    "id": "harbor",
     "name": "Harbor",
     "image": "24464.jpg",
     "color": "#1f5c5e"
   },
   {
+    "id": "marina",
     "name": "Marina",
     "image": "27756.jpg",
     "color": "#209197"
   },
   {
+    "id": "sagebrush",
     "name": "Sagebrush",
     "image": "25777.jpg",
     "color": "#99bcb8"
   },
   {
+    "id": "shoal",
     "name": "Shoal",
     "image": "27755.jpg",
     "color": "#1f3e4b"
   },
   {
+    "id": "surf",
     "name": "Surf",
     "image": "24459.jpg",
     "color": "#6e98af"
   },
   {
+    "id": "ivy",
     "name": "Ivy",
     "image": "26994.jpg",
     "color": "#44513e"
   },
   {
+    "id": "lichen",
     "name": "Lichen",
     "image": "26674.jpg",
     "color": "#c5bb65"
   },
   {
+    "id": "pistachio",
     "name": "Pistachio",
     "image": "27752.jpg",
     "color": "#89c09e"
   },
   {
+    "id": "sprout",
     "name": "Sprout",
     "image": "24462.jpg",
     "color": "#7ba258"
   },
   {
+    "id": "canary",
     "name": "Canary",
     "image": "24837.jpg",
     "color": "#f7c324"
   },
   {
+    "id": "creme-brulee",
     "name": "Crème Brulee",
     "image": "24137.jpg",
     "color": "#e1b86d"
   },
   {
+    "id": "marigold",
     "name": "Marigold",
     "image": "29530.jpg",
     "color": "#eea739"
   },
   {
+    "id": "mustard-seed",
     "name": "Mustard Seed",
     "image": "27750.jpg",
     "color": "#b68738"
   },
   {
+    "id": "clementine",
     "name": "Clementine",
     "image": "24460.jpg",
     "color": "#ee8732"
   },
   {
+    "id": "conch",
     "name": "Conch",
     "image": "25776.jpg",
     "color": "#ee8c7c"
   },
   {
+    "id": "copper",
     "name": "Copper",
     "image": "27749.jpg",
     "color": "#924e2a"
   },
   {
+    "id": "lava-falls",
     "name": "Lava Falls",
     "image": "29528.jpg",
     "color": "#9e3430"
   },
   {
+    "id": "moroccan-red",
     "name": "Moroccan Red",
     "image": "23996.jpg",
     "color": "#d72c34"
   },
   {
+    "id": "pomegranate",
     "name": "Pomegranate",
     "image": "24466.jpg",
     "color": "#741a29"
   },
   {
+    "id": "cerise",
     "name": "Cerise",
     "image": "24835.jpg",
     "color": "#d24078"
   },
   {
+    "id": "flamingo",
     "name": "Flamingo",
     "image": "25322.jpg",
     "color": "#ddb2b5"
   },
   {
+    "id": "blackberry",
     "name": "Blackberry",
     "image": "24467.jpg",
     "color": "#1a101d"
   },
   {
+    "id": "chicory",
     "name": "Chicory",
     "image": "27758.jpg",
     "color": "#626fb0"
   },
   {
+    "id": "eggplant",
     "name": "Eggplant",
     "image": "26998.jpg",
     "color": "#38284b"
   },
   {
+    "id": "lilac",
     "name": "Lilac",
     "image": "24836.jpg",
     "color": "#7f3078"
   },
   {
+    "id": "pennyroyal",
     "name": "Pennyroyal",
     "image": "27751.jpg",
     "color": "#bebbd1"
   },
   {
+    "id": "pirouette",
     "name": "Pirouette",
     "image": "29533.jpg",
     "color": "#cba0c3"
   },
   {
+    "id": "whisper",
     "name": "Whisper",
     "image": "25328.jpg",
     "color": "#af99ba"
   },
   {
+    "id": "cashew",
     "name": "Cashew",
     "image": "24461.jpg",
     "color": "#b38f6d"
   },
   {
+    "id": "coffee",
     "name": "Coffee",
     "image": "24138.jpg",
     "color": "#3f261d"
   },
   {
+    "id": "linen",
     "name": "Linen",
     "image": "23995.jpg",
     "color": "#d5bbaa"
   },
   {
+    "id": "macchiato",
     "name": "Macchiato",
     "image": "29531.jpg",
     "color": "#a56f56"
   },
   {
+    "id": "thicket",
     "name": "Thicket",
     "image": "26995.jpg",
     "color": "#63574c"
   },
   {
+    "id": "snow-white",
     "name": "Snow White",
     "image": "29492.jpg",
     "color": "#d9d6d8"
   },
   {
+    "id": "swan",
     "name": "Swan",
     "image": "24134.jpg",
     "color": "#e3ded9"
   },
   {
+    "id": "ash",
     "name": "Ash",
     "image": "26996.jpg",
     "color": "#595f62"
   },
   {
+    "id": "black",
     "name": "Black",
     "image": "24468.jpg",
     "color": "#1b1c1d"
   },
   {
+    "id": "carrara",
     "name": "Carrara",
     "image": "27748.jpg",
     "color": "#99989e"
   },
   {
+    "id": "gosling",
     "name": "Gosling",
     "image": "26239.jpg",
     "color": "#b1ac9f"
   },
   {
+    "id": "rocket",
     "name": "Rocket",
     "image": "25774.jpg",
     "color": "#7a7d94"
   },
   {
+    "id": "silver",
     "name": "Silver",
     "image": "27754.jpg",
     "color": "#bcbec6"
   },
   {
+    "id": "wallaby",
     "name": "Wallaby",
     "image": "25775.jpg",
     "color": "#756b60"
   },
   {
+    "id": "whisker",
     "name": "Whisker",
     "image": "24834.jpg",
     "color": "#cecbc6"

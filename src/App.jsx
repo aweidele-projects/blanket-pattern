@@ -10,10 +10,6 @@ function App() {
         <div className="w-3/5">
           <Blanket />
         </div>
-
-        {/* <div>
-          <Blanket />
-        </div> */}
       </div>
     </>
   );
