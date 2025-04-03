@@ -1,14 +1,13 @@
-import { useState } from "react";
-import { pattern, colors, patternColumns } from "../inc/pattern";
+import { useContext } from "react";
+import { BlanketContext } from "./BlanketContext";
+import { pattern, patternColumns } from "../inc/pattern";
 import products from "../inc/products.json";
 import { Swatch } from "./Swatch";
 const swatches = patternColumns(pattern);
 
 export const Blanket = () => {
-  const [patternColors, setPatternColors] = useState(colors);
-  const [colorPickerOpen, setColorPickerOpen] = useState(false);
+  const { patternColors } = useContext(BlanketContext);
   const swatchColors = Object.fromEntries(Object.entries(patternColors).map(([key, productId]) => [key, products.find((product) => product.id === productId)?.color || null]));
-  console.log(swatches);
 
   return (
     <>
