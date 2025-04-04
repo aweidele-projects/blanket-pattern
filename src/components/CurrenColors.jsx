@@ -17,7 +17,7 @@ export const CurrentColors = () => {
               <h3 className="text-xl font-bold text-center">{key}</h3>
               <div className="flex flex-col items-center gap-2 w-full">
                 <div className="w-[55%] h-auto rounded-full overflow-hidden">
-                  <img src={`/images/${yarn.image}`} />
+                  <img src={`images/${yarn.image}`} />
                 </div>
                 <div className="text-sm uppercase font-light">{yarn.name}</div>
               </div>
