@@ -14,8 +14,8 @@ export const Swatch = ({ color, swatch }) => {
   return (
     <div className="relative" style={{ gridColumn: swatch.column, gridRow: `${swatch.row} / ${swatch.row + swatch.span}` }}>
       <button className="cursor-pointer flex relative h-full w-full" onClick={() => handleToggleColor(swatch.color)}>
-        <div className={`grow -skew-y-25${sBorder}${lBorder}`} style={{ backgroundColor: color }}></div>
-        <div className={`grow skew-y-25${sBorder}${rBorder}`} style={{ backgroundColor: color }}></div>
+        <div className={`grow -skew-y-25 ${sBorder}${lBorder}`} style={{ backgroundColor: color }}></div>
+        <div className={`grow skew-y-25 ${sBorder}${rBorder}`} style={{ backgroundColor: color }}></div>
         {swatch.color !== "N" && <div className={`absolute text-sm top-0 left-0 w-full h-full flex items-center justify-center ${getTextColor(color)}`}>{swatch.color}</div>}
       </button>
     </div>
