@@ -5,4 +5,9 @@
   --aspect-blanket: 665 / 813;
   --blanket-cols: repeat(7, 1fr);
   --blanket-rows: repeat(14, 1fr);
+  --glow: 0 0 5px var(--color-amber-200);
+}
+
+button {
+  @apply cursor-pointer;
 }
