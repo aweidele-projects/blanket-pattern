@@ -8,15 +8,19 @@ export const pattern = [
   [3, 10, "E"],
 ];
 
-export const colors = {
-  A: "flamingo",
-  B: "pirouette",
-  C: "creme-brulee",
-  D: "pennyroyal",
-  E: "eggplant",
-  F: "clarity",
-  N: "swan",
-};
+export const colors =
+  localStorage.getItem("colors") !== null
+    ? JSON.parse(localStorage.getItem("colors"))
+    : {
+        A: "flamingo",
+        B: "pirouette",
+        C: "creme-brulee",
+        D: "pennyroyal",
+        E: "eggplant",
+        F: "clarity",
+        N: "swan",
+      };
+console.log(colors);
 
 const colorKeys = ["F", "E", "D", "C", "B", "A"];
 

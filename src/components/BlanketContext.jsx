@@ -12,10 +12,12 @@ export const BlanketProvider = ({ children }) => {
 
   const handleSetPatternColor = (swatchColor, yarnId) => {
     setPatternColors((prev) => {
-      return {
+      const newColor = {
         ...prev,
         [swatchColor]: yarnId,
       };
+      localStorage.setItem("colors", JSON.stringify(newColor));
+      return newColor;
     });
     setSelectedColor(false);
   };
