@@ -17,6 +17,9 @@ jobs:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Clear npm cache
+        run: npm cache clean --force
+
       - name: 📦 Install Node.js and Dependencies
         uses: actions/setup-node@v4
         with:
