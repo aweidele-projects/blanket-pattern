@@ -5,7 +5,15 @@ import { AWComLogo, GithubLogo } from "./components/Logos";
 function App() {
   return (
     <>
-      <div className="p-10 flex items-stretch gap-10 max-w-7xl m-auto max-h-screen">
+      <div className="text-center text-white">
+        <h1 className="text-3xl mt-5 mb-2">Chevron Panel Knit Baby Blanket</h1>
+        <p className="text-xs">
+          <a className="hover:text-canary" href="https://www.yarnspirations.com/products/bernat-chevron-panel-knit-baby-blanket" target="_blank">
+            https://www.yarnspirations.com/products/bernat-chevron-panel-knit-baby-blanket
+          </a>
+        </p>
+      </div>
+      <div className="p-10 flex items-stretch gap-10 max-w-7xl m-auto max-h-[88vh]">
         <BlanketProvider>
           <div className="w-2/5">
             <ColorSelector />
