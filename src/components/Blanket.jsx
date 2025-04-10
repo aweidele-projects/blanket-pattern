@@ -12,7 +12,7 @@ export const Blanket = () => {
 
   return (
     <>
-      <div className="aspect-blanket max-h-full shadow-xl shadow-black relative ">
+      <div className="aspect-blanket h-full w-full shadow-xl shadow-black relative ">
         <div className="h-full grid grid-cols-(--blanket-cols) grid-rows-(--blanket-rows) relative z-0">
           {swatches.map((swatch, i) => (
             <Swatch key={i} swatch={swatch} color={swatchColors[swatch.color]} />

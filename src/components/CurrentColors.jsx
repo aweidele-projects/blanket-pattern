@@ -8,9 +8,8 @@ export const CurrentColors = () => {
   const currentColors = Object.fromEntries(Object.entries(patternColors).map(([key, productId]) => [key, products.find((product) => product.id === productId) || null]));
 
   return (
-    <div className="text-white">
-      <h2 className="text-2xl font-bold mb-4">Current Colors</h2>
-      <ul className="grid grid-cols-2 gap-3">
+    <div className="text-white h-full">
+      <ul className="grid grid-cols-2 gap-3 w-full">
         {Object.entries(currentColors).map(([key, yarn]) => (
           <li key={key}>
             <button onClick={() => handleToggleColor(key)} className="w-full flex gap-3 items-center mb-4 border border-zinc-500 p-4">
