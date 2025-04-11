@@ -15,31 +15,10 @@ function App() {
         </p>
       </header>
       <div className="grow bg-red-400 p-5">
-        <div className="flex items-stretch gap-5 h-full w-full">
-          <BlanketProvider>
-            <div className="grow">
-              <ColorSelector />
-            </div>
-            <div className="shrink-0 grow relative">
-              <div className="absolute top-0 h-full max-w-full max-h-full aspect-blanket">
-                <Blanket />
-              </div>
-            </div>
-            {/* <div>
-            <ColorSelector />
-          </div> */}
-          </BlanketProvider>
+        <div className="flex items-stretch gap-5 h-full w-full max-w-7xl m-auto">
+          <div class="flex-1 border">left</div>
+          <div class="flex-1 border">right</div>
         </div>
-        {/* <div className="p-10 flex items-stretch gap-10 h-full">
-          <BlanketProvider>
-            <div className="grow">
-              <ColorSelector />
-            </div>
-            <div className="aspect-blanket h-full shrink-0">
-              <Blanket />
-            </div>
-          </BlanketProvider>
-        </div> */}
       </div>
       <footer className="p-5 flex items-center gap-4 text-white">
         <a className="flex gap-4 items-center text-white hover:text-canary text-xs" href="https://github.com/aweidele-projects/blanket-pattern" target="_blank">
@@ -57,3 +36,20 @@ function App() {
 }
 
 export default App;
+
+/*
+
+<div className="flex items-stretch gap-5 h-full w-full">
+          <BlanketProvider>
+            <div className="flex-1/3">
+              <ColorSelector />
+            </div>
+            <div className="flex-2/3">
+              <div className="">
+                <Blanket />
+              </div>
+            </div>
+          </BlanketProvider>
+        </div>
+
+        */
