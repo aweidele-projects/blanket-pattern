@@ -8,6 +8,8 @@
   --glow: 0 0 5px var(--color-amber-200);
 
   --color-canary: #f7c324;
+
+  --main-body: auto 1fr auto;
 }
 
 button {
