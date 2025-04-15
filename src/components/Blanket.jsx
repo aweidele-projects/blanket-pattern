@@ -10,8 +10,8 @@ export const Blanket = () => {
   const swatchColors = Object.fromEntries(Object.entries(patternColors).map(([key, productId]) => [key, products.find((product) => product.id === productId)?.color || null]));
 
   return (
-    <div className="w-full h-full absolute top-0 left-0 border-red-600 border border-dotted">
-      <svg className="border-blue-600 border border-dotted max-h-full max-w-full object-contain aspect-blanket" viewBox="0 0 602 744">
+    <div className="w-full h-full absolute top-0 left-0 ">
+      <svg className="max-h-full max-w-full object-contain aspect-blanket" viewBox="0 0 602 744">
         {swatches.map((swatch, i) => (
           <Swatch key={i} swatch={swatch} fill={swatchColors[swatch.color]} />
         ))}

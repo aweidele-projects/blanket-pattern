@@ -1,3 +1,5 @@
+import { getTextColor } from "../inc/pattern";
+
 const swatchShape = [
   [0, 16],
   [43, 0],
@@ -10,16 +12,31 @@ const swatchShape = [
 
 export const Swatch = ({ fill, swatch }) => {
   const { color, column, row, span } = swatch;
-  console.log(swatch);
+  console.log(swatch, fill);
+  console.log(fill, getTextColor(fill));
 
   const thisSwatch = swatchShape.map((polys, i) => {
+    const rowMult = i === 3 || i === 4 || i === 5 ? (span - 1) * 52 : 0;
     const x = polys[0] + 86 * (column - 1);
-    const y = polys[1] + 52 * (row - 1);
+    const y = polys[1] + 52 * (row - 1) + rowMult;
     return [x, y];
   });
+  const textX = 39.3281 + 86 * (column - 1);
+  const textY = 35.478 + 52 * (row - 1);
   console.log(thisSwatch);
 
-  return <polygon style={{ fill: fill }} className="fill-green-700 transition-all duration-1000" points={thisSwatch.flat().join(" ")} />;
+  return (
+    <>
+      <polygon style={{ fill: fill }} className="transition-all duration-1000" points={thisSwatch.flat().join(" ")} />
+      {color !== "N" && (
+        <text style={{ fill: getTextColor(fill, "hex") }} className="text-sm transition-all duration-1000" transform={`translate(${textX} ${textY})`}>
+          <tspan x="0" y="0">
+            {color}
+          </tspan>
+        </text>
+      )}
+    </>
+  );
 };
 
 /*
