@@ -3,11 +3,9 @@ import { BlanketContext } from "./BlanketContext";
 import { getTextColor } from "../inc/pattern";
 
 export const YarnColor = ({ yarn }) => {
-  console.log("YarnColor()");
   const { patternColors, selectedColor, handleSetPatternColor } = useContext(BlanketContext);
 
   const selectedColorId = patternColors[selectedColor];
-  console.log(yarn, selectedColorId);
   return (
     <>
       <button onClick={() => handleSetPatternColor(selectedColor, yarn.id)} className="text-[10px] text-white uppercase flex flex-col justify-start gap-2 cursor-pointer">

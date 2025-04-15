@@ -1,3 +1,6 @@
+import products from "./products.json";
+const colorKeys = ["F", "E", "D", "C", "B", "A"];
+
 export const pattern = [
   [2, 10, "C"],
   [1, 10, "E"],
@@ -8,20 +11,35 @@ export const pattern = [
   [3, 10, "E"],
 ];
 
-export const colors =
-  localStorage.getItem("colors") !== null
-    ? JSON.parse(localStorage.getItem("colors"))
-    : {
-        A: "flamingo",
-        B: "pirouette",
-        C: "creme-brulee",
-        D: "pennyroyal",
-        E: "eggplant",
-        F: "clarity",
-        N: "swan",
-      };
+export const colors = (() => {
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get("c");
 
-const colorKeys = ["F", "E", "D", "C", "B", "A"];
+  if (code) {
+    const keys = ["A", "B", "C", "D", "E", "F", "N"];
+    const colorsFromUrl = JSON.parse(atob(code))
+      .map((clr) => products.find((el) => el.short === clr).id)
+      .reduce((acc, val, i) => {
+        acc[keys[i]] = val;
+        return acc;
+      }, {});
+    return colorsFromUrl;
+  }
+
+  if (localStorage.getItem("colors") !== null) return JSON.parse(localStorage.getItem("colors"));
+
+  return {
+    A: "flamingo",
+    B: "pirouette",
+    C: "creme-brulee",
+    D: "pennyroyal",
+    E: "eggplant",
+    F: "clarity",
+    N: "swan",
+  };
+})();
+
+console.log("colors", colors);
 
 export const patternColumns = (pattern) => {
   const column = pattern
