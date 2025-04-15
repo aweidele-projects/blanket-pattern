@@ -20,7 +20,6 @@ export const colors =
         F: "clarity",
         N: "swan",
       };
-console.log(colors);
 
 const colorKeys = ["F", "E", "D", "C", "B", "A"];
 
