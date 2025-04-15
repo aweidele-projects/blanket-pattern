@@ -5,21 +5,21 @@ import { AWComLogo, GithubLogo } from "./components/Logos";
 function App() {
   return (
     <div className="h-screen w-full flex flex-col">
-      <header className="text-center text-white">
+      <header className="text-center text-white px-2">
         <h1 className="text-3xl mt-5 mb-2">Chevron Panel Knit Baby Blanket</h1>
         <p className="text-xs">
-          Get this free pattern here:{" "}
-          <a className="hover:text-canary underline" href="https://www.yarnspirations.com/products/bernat-chevron-panel-knit-baby-blanket" target="_blank">
+          Get this free pattern here:
+          <a className="hover:text-canary underline overflow-hidden block w-full text-nowrap" href="https://www.yarnspirations.com/products/bernat-chevron-panel-knit-baby-blanket" target="_blank">
             https://www.yarnspirations.com/products/bernat-chevron-panel-knit-baby-blanket
           </a>
         </p>
       </header>
-      <main className="h-full w-full max-w-7xl m-auto p-5 text-white flex gap-20">
+      <main className="h-full w-full max-w-7xl m-auto p-5 text-white flex max-sm:flex-col-reverse gap-5 sm:gap-20">
         <BlanketProvider>
-          <div className="flex-2/5">
+          <div className="flex-2/5 sm:flex-2/5">
             <ColorSelector />
           </div>
-          <div className="flex-3/5 relative">
+          <div className="flex-3/5 sm:flex-3/5 relative">
             <Blanket />
           </div>
         </BlanketProvider>
