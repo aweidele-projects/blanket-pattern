@@ -1,14 +1,14 @@
 import { useContext } from "react";
-import products from "../inc/products.json";
-import { YarnColor } from "./YarnColor";
+
 import { BlanketContext } from "./BlanketContext";
 import { CurrentColors } from "./CurrentColors";
+import { ColorSelection } from "./ColorSelection";
 
 export const ColorSelector = () => {
   const { selectedColor, setSelectedColor } = useContext(BlanketContext);
   return (
     <div className="h-full flex flex-col">
-      <CurrentColors />
+      {selectedColor ? <ColorSelection /> : <CurrentColors />}
       {/* {selectedColor ? (
         <>
           <button className="bg-white text-sm uppercase font-light px-3 py-1" onClick={() => setSelectedColor(false)}>
