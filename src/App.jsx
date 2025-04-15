@@ -4,34 +4,24 @@ import { ColorSelector } from "./components/ColorSelector";
 import { AWComLogo, GithubLogo } from "./components/Logos";
 function App() {
   return (
-    <div className="h-screen">
-      <div className="h-full w-full flex flex-col">
-        <header className="shrink-0">
-          <h1>Header</h1>
+    <div className="">
+      <div className="h-screen w-full flex flex-col">
+        <header className="text-center text-white bg-red-500">
+          <h1 className="text-3xl mt-5 mb-2">Chevron Panel Knit Baby Blanket</h1>
+          <p className="text-xs">
+            Get this free pattern here:{" "}
+            <a className="hover:text-canary underline" href="https://www.yarnspirations.com/products/bernat-chevron-panel-knit-baby-blanket" target="_blank">
+              https://www.yarnspirations.com/products/bernat-chevron-panel-knit-baby-blanket
+            </a>
+          </p>
         </header>
-        <main className="grow-1 h-full w-full max-w-7xl m-auto border border-amber-300 flex gap-5 items-stretch p-5">
-          <BlanketProvider>
-            <div className="flex-1">
-              <div className="h-full w-full border-white border-dotted border overflow-auto text-white text-3xl">
-                <p>Fusce convallis metus id felis luctus adipiscing. Sed aliquam ultrices mauris. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque posuere.</p>
-
-                <p>Pellentesque posuere. Cras non dolor. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Aliquam lobortis.</p>
-
-                <p>Nulla porta dolor. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Nam pretium turpis et arcu. In hac habitasse platea dictumst. Pellentesque dapibus hendrerit tortor.</p>
-
-                <p>Fusce commodo aliquam arcu. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Donec vitae orci sed dolor rutrum auctor. Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.</p>
-
-                <p>Praesent vestibulum dapibus nibh. Morbi nec metus. Fusce vulputate eleifend sapien. Maecenas nec odio et ante tincidunt tempus. Duis leo.</p>
-              </div>
-            </div>
-            <div className="flex-1">
-              <div className="max-h-full max-w-full w-auto h-auto aspect-blanket border border-dotted border-white">
-                <Blanket />
-              </div>
-            </div>
-          </BlanketProvider>
+        <main className="h-full w-full max-w-7xl m-auto border border-amber-300 p-5 text-white">
+          <div className="h-full w-full flex gap-5">
+            <div className="flex-1 border border-dotted border-red-400">Left</div>
+            <div className="flex-1 border border-dotted border-red-400">RIght</div>
+          </div>
         </main>
-        <footer className="shrink-0">footer</footer>
+        <footer className="shrink-0 bg-red-500 py-2">footer</footer>
       </div>
     </div>
     // <div className="grid grid-cols-1 grid-rows-(--main-body) h-screen">
