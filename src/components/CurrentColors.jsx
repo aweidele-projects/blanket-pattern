@@ -9,7 +9,7 @@ export const CurrentColors = () => {
 
   return (
     <div className="h-full w-full flex flex-col">
-      <h2 className="text-2xl font-bold mb-4">Current Colors</h2>
+      <h2 className="text-xl sm:text-2xl font-bold mb-4">Current Colors</h2>
       <div className="flex-1 relative">
         <div className="h-full w-full overflow-auto absolute top-0 left-0">
           <ul className="grid grid-cols-3 sm:grid-cols-2 gap-3 w-full">
