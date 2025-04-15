@@ -1,34 +1,42 @@
-import { useContext, useState } from "react";
-import { HexColorPicker } from "react-colorful";
-// import { HslColorPicker } from "react-colorful";
+import { useContext } from "react";
 import { BlanketContext } from "./BlanketContext";
 import { getTextColor } from "../inc/pattern";
 
-export const Swatch = ({ color, swatch }) => {
-  const { selectedColor, handleToggleColor } = useContext(BlanketContext);
+const swatchShape = [
+  [0, 16],
+  [43, 0],
+  [86, 16],
+  [86, 68],
+  [43, 52],
+  [0, 68],
+  [0, 16],
+];
 
-  const sBorder = selectedColor === swatch.color ? " border-t-2 border-b-2 border-red-700" : "";
-  const lBorder = selectedColor === swatch.color ? " border-l-2" : "";
-  const rBorder = selectedColor === swatch.color ? " border-r-2" : "";
+export const Swatch = ({ fill, swatch }) => {
+  const { selectedColor, handleToggleColor } = useContext(BlanketContext);
+  const { color, column, row, span } = swatch;
+
+  const stroke = selectedColor === color ? "" : "";
+
+  const thisSwatch = swatchShape.map((polys, i) => {
+    const rowMult = i === 3 || i === 4 || i === 5 ? (span - 1) * 52 : 0;
+    const x = polys[0] + 86 * (column - 1);
+    const y = polys[1] + 52 * (row - 1) + rowMult;
+    return [x, y];
+  });
+  const textX = 39.3281 + 86 * (column - 1);
+  const textY = 35.478 + 52 * (row - 1);
 
   return (
-    <div className="relative" style={{ gridColumn: swatch.column, gridRow: `${swatch.row} / ${swatch.row + swatch.span}` }}>
-      <button className="cursor-pointer flex relative h-full w-full" onClick={() => handleToggleColor(swatch.color)}>
-        <div className={`grow -skew-y-25 transition-all duration-300 ${sBorder}${lBorder}`} style={{ backgroundColor: color }}></div>
-        <div className={`grow skew-y-25 transition-all duration-300 ${sBorder}${rBorder}`} style={{ backgroundColor: color }}></div>
-        {swatch.color !== "N" && <div className={`absolute text-sm top-0 left-0 w-full h-full flex items-center justify-center ${getTextColor(color)}`}>{swatch.color}</div>}
-      </button>
-    </div>
+    <g onClick={() => handleToggleColor(swatch.color)} className="cursor-pointer">
+      <polygon style={{ fill: fill }} className={`transition-all duration-1000${stroke}`} points={thisSwatch.flat().join(" ")} />
+      {color !== "N" && (
+        <text style={{ fill: getTextColor(fill, "hex") }} className="text-sm transition-all duration-1000" transform={`translate(${textX} ${textY})`}>
+          <tspan x="0" y="0">
+            {color}
+          </tspan>
+        </text>
+      )}
+    </g>
   );
 };
-
-/*
-      {colorPicker && (
-        <div className="absolute z-10 top-4 left-full">
-          <button className="bg-zinc-200 text-xs px-2 py-1 rounded-md mb-1 shadow-lg shadow-zinc-500" onClick={() => handleColorPickerToggle(false)}>
-            close
-          </button>
-          <HexColorPicker color={color} onChange={(color) => handleColorChange(swatch, color)} className="shadow-lg shadow-zinc-500" />
-        </div>
-      )}
-        */
