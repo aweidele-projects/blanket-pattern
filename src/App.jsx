@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="h-screen w-full flex flex-col">
       <header className="text-center text-white px-2">
-        <h1 className="text-3xl mt-5 mb-2">Chevron Panel Knit Baby Blanket</h1>
+        <h1 className="text-2xl sm:text-3xl mt-5 mb-2">Chevron Panel Knit Baby Blanket</h1>
         <p className="text-xs">
           Get this free pattern here:
           <a className="hover:text-canary underline overflow-hidden block w-full text-nowrap" href="https://www.yarnspirations.com/products/bernat-chevron-panel-knit-baby-blanket" target="_blank">

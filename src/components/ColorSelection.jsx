@@ -8,7 +8,7 @@ export const ColorSelection = () => {
   return (
     <div className="h-full w-full flex flex-col">
       <div class="flex justify-between items-center pb-4">
-        <h2 className="text-2xl font-bold">Select a Color</h2>
+        <h2 className="text-xl sm:text-2xl font-bold">Select a Color</h2>
         <button className="bg-white text-black text-sm uppercase font-light px-3 py-1" onClick={() => setSelectedColor(false)}>
           Close
         </button>
