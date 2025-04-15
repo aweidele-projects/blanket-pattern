@@ -19,7 +19,9 @@ function App() {
           <div className="flex-2/5">
             <ColorSelector />
           </div>
-          <div className="flex-3/5">Right</div>
+          <div className="flex-3/5 relative">
+            <Blanket />
+          </div>
         </BlanketProvider>
       </main>
       <footer className="shrink-0 bg-red-500 p-2 flex justify-center gap-5 text-white">
