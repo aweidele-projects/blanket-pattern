@@ -1,6 +1,4 @@
 import { useContext, useState } from "react";
-import { HexColorPicker } from "react-colorful";
-// import { HslColorPicker } from "react-colorful";
 import { BlanketContext } from "./BlanketContext";
 import { getTextColor } from "../inc/pattern";
 
@@ -21,14 +19,3 @@ export const Swatch = ({ color, swatch }) => {
     </div>
   );
 };
-
-/*
-      {colorPicker && (
-        <div className="absolute z-10 top-4 left-full">
-          <button className="bg-zinc-200 text-xs px-2 py-1 rounded-md mb-1 shadow-lg shadow-zinc-500" onClick={() => handleColorPickerToggle(false)}>
-            close
-          </button>
-          <HexColorPicker color={color} onChange={(color) => handleColorChange(swatch, color)} className="shadow-lg shadow-zinc-500" />
-        </div>
-      )}
-        */

@@ -5,7 +5,7 @@ import { AWComLogo, GithubLogo } from "./components/Logos";
 function App() {
   return (
     <div className="h-screen w-full flex flex-col">
-      <header className="text-center text-white bg-red-500">
+      <header className="text-center text-white">
         <h1 className="text-3xl mt-5 mb-2">Chevron Panel Knit Baby Blanket</h1>
         <p className="text-xs">
           Get this free pattern here:{" "}
@@ -24,7 +24,7 @@ function App() {
           </div>
         </BlanketProvider>
       </main>
-      <footer className="shrink-0 bg-red-500 p-2 flex justify-center gap-5 text-white">
+      <footer className="shrink-0 bg-zinc-800 p-2 flex justify-center gap-5 text-white">
         <a className="flex gap-4 items-center hover:text-canary text-xs" href="https://github.com/aweidele-projects/blanket-pattern" target="_blank">
           <GithubLogo className="fill-current h-auto block w-6" />
           <span>View this project in Github</span>
