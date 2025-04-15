@@ -8,7 +8,8 @@ export const ColorSelector = () => {
   const { selectedColor, setSelectedColor } = useContext(BlanketContext);
   return (
     <div className="h-full flex flex-col">
-      {selectedColor ? (
+      <CurrentColors />
+      {/* {selectedColor ? (
         <>
           <button className="bg-white text-sm uppercase font-light px-3 py-1" onClick={() => setSelectedColor(false)}>
             Close
@@ -29,7 +30,7 @@ export const ColorSelector = () => {
           </div>
           <p>Saved colors</p>
         </>
-      )}
+      )} */}
     </div>
   );
 };
