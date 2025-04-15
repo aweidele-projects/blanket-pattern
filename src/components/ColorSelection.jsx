@@ -15,7 +15,7 @@ export const ColorSelection = () => {
       </div>
       <div className="flex-1 relative">
         <div className="h-full w-full overflow-auto absolute top-0 left-0">
-          <div className="grid grid-cols-5 gap-5">
+          <div className="grid grid-cols-4 sm:grid-cols-5 gap-5">
             {products.map((product) => (
               <YarnColor key={product.name} yarn={product} />
             ))}

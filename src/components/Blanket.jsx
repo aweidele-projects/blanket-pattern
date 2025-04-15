@@ -11,7 +11,7 @@ export const Blanket = () => {
 
   return (
     <div className="w-full h-full absolute top-0 left-0 ">
-      <svg className="max-h-full max-w-full object-contain aspect-blanket" viewBox="0 0 602 744">
+      <svg className="max-h-full max-w-full object-contain aspect-blanket m-auto" viewBox="0 0 602 744">
         {swatches.map((swatch, i) => (
           <Swatch key={i} swatch={swatch} fill={swatchColors[swatch.color]} />
         ))}
