@@ -62,7 +62,7 @@ export const SavedColors = () => {
           </button>
           {selectorOpen && (
             <div className="absolute bottom-full left-0 w-[300px] bg-white text-zinc-900 shadow-2xl shadow-zinc-800">
-              <button className="w-full hover:bg-red-300 text-xs text-right" onClick={handleClose}>
+              <button className="w-full hover:bg-red-300 text-xs text-right p-2" onClick={handleClose}>
                 Close
               </button>
               <ul className="max-h-[50vh] overflow-auto">
