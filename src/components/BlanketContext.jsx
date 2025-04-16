@@ -3,6 +3,8 @@ export const BlanketContext = createContext();
 import { colors } from "../inc/pattern";
 import products from "../inc/products.json";
 
+const savedColorsFromLocal = localStorage.getItem("savedColors");
+
 export const BlanketProvider = ({ children }) => {
   const [patternColors, setPatternColors] = useState(colors);
   const [selectedColor, setSelectedColor] = useState(false);
@@ -33,5 +35,8 @@ export const BlanketProvider = ({ children }) => {
     setSelectedColor(false);
   };
 
-  return <BlanketContext.Provider value={{ patternColors, selectedColor, setSelectedColor, handleToggleColor, handleSetPatternColor }}>{children}</BlanketContext.Provider>;
+  // saved colors
+  const [savedColors, setSavedColors] = useState(savedColorsFromLocal ? savedColorsFromLocal : []);
+
+  return <BlanketContext.Provider value={{ patternColors, selectedColor, setSelectedColor, handleToggleColor, handleSetPatternColor, savedColors, setSavedColors }}>{children}</BlanketContext.Provider>;
 };

@@ -39,8 +39,6 @@ export const colors = (() => {
   };
 })();
 
-console.log("colors", colors);
-
 export const patternColumns = (pattern) => {
   const column = pattern
     .map((col, colNum) => {

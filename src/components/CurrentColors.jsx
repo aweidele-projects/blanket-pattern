@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { BlanketContext } from "./BlanketContext";
 import products from "../inc/products.json";
+import { SavedColors } from "./SavedColors";
 
 export const CurrentColors = () => {
   const { patternColors, handleToggleColor } = useContext(BlanketContext);
@@ -30,7 +31,7 @@ export const CurrentColors = () => {
         </div>
       </div>
       <div>
-        <p>Saved colors</p>
+        <SavedColors />
       </div>
     </div>
     // <div className="text-white h-full">
